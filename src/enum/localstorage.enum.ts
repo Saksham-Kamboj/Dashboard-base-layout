@@ -1,0 +1,16 @@
+export enum LocalStorageEnum {
+  TOKEN = 'token',
+  ORG_ID = 'organisationId',
+  USER_ID = 'userId',
+  USER_ROLE = 'userRoles',
+  THEME = 'theme',
+  TICKET_NO = 'TicketNo',
+  EBOTIFY_CUSTOMER_ID = 'eBotifyCustomerId',
+  CUSTOMER_NAME = 'customerName',
+  // Notification Storage
+  NOTIFICATION = 'NOTIFICATION',
+  NOTIFICATION_NEW_MESSAGE = 'NOTIFICATION_NEW_MESSAGE',
+  NOTIFICATION_NEW_CHAT = 'NOTIFICATION_NEW_CHAT',
+  REPEAT_NOTIFICATION = 'REPEAT_NOTIFICATION',
+  NOTIFICATION_CHAT_LIST_ITEM_FLASH = 'NOTIFICATION_CHAT_LIST_ITEM_FLASH',
+}
