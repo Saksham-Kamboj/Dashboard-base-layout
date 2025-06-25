@@ -29,14 +29,18 @@ export class StorageUtill {
    * @param {string} key
    */
   public static removeLocalStorage(key: string): void {
-    localStorage.removeItem(key);
+    if (typeof window !== "undefined") {
+      localStorage.removeItem(key);
+    }
   }
 
   /**
    * Clear the whole local storage
    */
   public static clearLocalStorage(): void {
-    localStorage.clear();
+    if (typeof window !== "undefined") {
+      localStorage.clear();
+    }
   }
 
   /**
@@ -45,7 +49,9 @@ export class StorageUtill {
    * @param {string} value
    */
   public static setSessionStorage(key: string, value: string): void {
-    sessionStorage.setItem(key, value);
+    if (typeof window !== "undefined") {
+      sessionStorage.setItem(key, value);
+    }
   }
 
   /**
@@ -54,14 +60,19 @@ export class StorageUtill {
    * @return {string}
    */
   public static getSessionStorage(key: string): string {
-    const receivedKey = sessionStorage.getItem(key);
-    return receivedKey || "";
+    if (typeof window !== "undefined") {
+      const receivedKey = sessionStorage.getItem(key);
+      return receivedKey || "";
+    }
+    return "";
   }
 
   /**
    * @functions {clearSessionStorage} - Clear the whole session storage
    */
   public static clearSessionStorage(): void {
-    sessionStorage.clear();
+    if (typeof window !== "undefined") {
+      sessionStorage.clear();
+    }
   }
 }
