@@ -20,7 +20,7 @@ const GeographyChart = ({ isDashboard = false }) => {
         title={title}
         description="This chart shows the total phishings."
       >
-        <ChartBox height={250}>
+        <ChartBox height={250} sx={{ padding: "5px" }}>
           <ResponsiveChoropleth
             data={data}
             theme={{

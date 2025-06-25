@@ -8,7 +8,6 @@ import {
   TableRow,
   Paper,
   Chip,
-  Box,
 } from "@mui/material";
 import { StringHelper } from "@/helpers/string.helper";
 import { TableController } from "./table.controller";
@@ -37,13 +36,10 @@ export function LatestData(): ReactElement {
     <ChartProvider id={StringHelper.replaceSpaceToDash(title)}>
       <ChartContainer
         title={title}
-        description="Latest phishing data analysis and statistics"
+        description="Latest data analysis and statistics"
       >
-        <ChartBox height={300}>
-          <TableContainer
-            component={Paper}
-            sx={{ maxHeight: 300, overflow: "auto", paddingLeft:0.5 }}
-          >
+        <ChartBox>
+          <TableContainer component={Paper} sx={{ overflow: "auto", maxHeight:"297px" }}>
             <Table stickyHeader size="small">
               <TableHead>
                 <TableRow>

@@ -2,8 +2,6 @@ import React, { ReactElement } from "react";
 import {
   Card,
   CardContent,
-  CardHeader,
-  Divider,
   Typography,
   Box,
   CircularProgress,
@@ -42,7 +40,6 @@ export function InfoCard(props: IInfoCardProps): ReactElement {
         boxShadow: 1,
         borderRadius: 1,
         overflow: "hidden",
-        paddingTop: "5px",
       }}
     >
       <CardContent

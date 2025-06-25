@@ -1,9 +1,9 @@
 "use client";
 
-import { mockPhishingData } from "./latest-phishing-data";
+import { mockData } from "./latest-data";
 
 // Define the data structure for phishing entries
-export interface IPhishingData {
+export interface IData {
   id: number;
   email: string;
   status: string;
@@ -14,7 +14,7 @@ export interface IPhishingData {
 interface ITableControllerResponses {
   getters: {
     title: string;
-    tableData: IPhishingData[];
+    tableData: IData[];
     enableButton: boolean;
   };
 }
@@ -22,8 +22,8 @@ interface ITableControllerResponses {
 export function TableController(): ITableControllerResponses {
   return {
     getters: {
-      title: "Latest Phishing Data",
-      tableData: mockPhishingData,
+      title: "Latest Data",
+      tableData: mockData,
       enableButton: true,
     },
   };

@@ -8,7 +8,6 @@ import { DashboardLayout } from "@toolpad/core/DashboardLayout";
 import { usePathname, useRouter } from "next/navigation";
 import { Box, Stack, Typography } from "@mui/material";
 import Image from "next/image";
-import ekvayu_logo from "@/assets/ekvayu-logo.png";
 import UserProfileHeader from "@/components/common/user-profile-header";
 
 const NAVIGATION: Navigation = [
@@ -18,111 +17,111 @@ const NAVIGATION: Navigation = [
     icon: <MuiIcons.DashboardIcon />,
   },
   {
-    segment: "admin/plugin",
-    title: "Plugin",
+    segment: "admin/group1",
+    title: "Group 1",
     icon: <MuiIcons.ExtensionIcon />,
     children: [
       {
-        segment: "available-license",
-        title: "Available license",
+        segment: "admin/group1/child1",
+        title: "Child 1",
         icon: <MuiIcons.VpnKeyIcon />,
       },
       {
-        segment: "agent-installed",
-        title: "Agent installed",
+        segment: "admin/group1/child2",
+        title: "Child 2",
         icon: <MuiIcons.ComputerIcon />,
       },
       {
-        segment: "allocated-license",
-        title: "Allocated license",
+        segment: "admin/group1/child3",
+        title: "Child 3",
         icon: <MuiIcons.AssignmentIcon />,
       },
       {
-        segment: "all-license-report",
-        title: "All license report",
+        segment: "admin/group1/child4",
+        title: "Child 4",
         icon: <MuiIcons.AssessmentIcon />,
       },
     ],
   },
   {
-    segment: "admin/phishing-mails",
-    title: "Phishing mails",
+    segment: "admin/group2",
+    title: "Group 2",
     icon: <MuiIcons.EmailIcon />,
   },
   {
-    segment: "admin/disputes",
-    title: "Disputes",
+    segment: "admin/group3",
+    title: "Group 3",
     icon: <MuiIcons.GavelIcon />,
   },
   {
-    segment: "admin/report",
-    title: "Report",
+    segment: "admin/group4",
+    title: "Group 4",
     icon: <MuiIcons.AssessmentIcon />,
   },
   {
-    segment: "admin/sandbox",
-    title: "Sandbox",
+    segment: "admin/group5",
+    title: "Group 5",
     icon: <MuiIcons.SecurityIcon />,
     children: [
       {
-        segment: "running-sandbox",
-        title: "Running Sandbox",
+        segment: "admin/group5/child1",
+        title: "Child 1",
         icon: <MuiIcons.PlayArrowIcon />,
       },
       {
-        segment: "completed-sandbox",
-        title: "Completed Sandbox",
+        segment: "admin/group5/child2",
+        title: "Child 2",
         icon: <MuiIcons.DoneIcon />,
       },
     ],
   },
   {
-    segment: "admin/quarantine",
-    title: "Quarantine",
+    segment: "admin/group6",
+    title: "Group 6",
     icon: <MuiIcons.FolderSpecialIcon />,
   },
   {
-    segment: "admin/rogue-db",
-    title: "RogueDB",
+    segment: "admin/group7",
+    title: "Group 7",
     icon: <MuiIcons.StorageIcon />,
     children: [
       {
-        segment: "urls",
-        title: "Urls",
+        segment: "admin/group7/child1",
+        title: "Child 1",
         icon: <MuiIcons.LinkIcon />,
       },
       {
-        segment: "domains",
-        title: "Domains",
+        segment: "admin/group7/child2",
+        title: "Child 2",
         icon: <MuiIcons.DomainIcon />,
       },
       {
-        segment: "mails",
-        title: "Mails",
+        segment: "admin/group7/child3",
+        title: "Child 3",
         icon: <MuiIcons.MailIcon />,
       },
     ],
   },
   {
-    segment: "admin/logs-report",
-    title: "Logs report",
+    segment: "admin/group8",
+    title: "Group 8",
     icon: <MuiIcons.BugReportIcon />,
     children: [
       {
-        segment: "exception-logs",
-        title: "Exception Logs",
+        segment: "admin/group8/child1",
+        title: "Child 1",
         icon: <MuiIcons.WarningIcon />,
       },
       {
-        segment: "error-logs",
-        title: "Error Logs",
+        segment: "admin/group8/child2",
+        title: "Child 2",
         icon: <MuiIcons.ErrorIcon />,
       },
     ],
   },
   {
-    segment: "profile",
-    title: "Profile",
+    segment: "admin/group9",
+    title: "Group 9",
     icon: <MuiIcons.PersonIcon />,
   },
 ];
@@ -171,9 +170,12 @@ function CustomAppTitle() {
   return (
     <Stack direction="row" alignItems="center" spacing={2}>
       <Image
-        src={ekvayu_logo}
-        alt="Ekvayu logo"
-        className="w-5 h-5 md:w-6 md:h-6 lg:w-8 lg:h-8"
+        src={'https://images.pexels.com/photos/1416900/pexels-photo-1416900.jpeg'}
+        alt="Logo"
+        width={100}
+        height={100}
+        loading="lazy"
+        className="w-5 h-5 md:w-6 md:h-6 lg:w-10 lg:h-10 rounded-full object-cover" // Adjust size for different screen sizes
       />
       <Typography
         variant="h6"
@@ -181,7 +183,7 @@ function CustomAppTitle() {
           fontSize: { xs: "14px", sm: "1rem", md: "20px" }, // Adjust font size for different screen sizes
         }}
       >
-        Ekvayu Tech
+        Admin Dashboard
       </Typography>
     </Stack>
   );
@@ -233,7 +235,6 @@ export default function DashboardLayoutBase({
         slots={{
           appTitle: CustomAppTitle,
           toolbarActions: UserProfileHeader,
-          // sidebarFooter: SidebarFooter,
         }}
       >
         <Box className="p-2">{children}</Box>

@@ -19,7 +19,16 @@ export function DonutChart(): ReactElement {
         description="This chart shows the distribution across categories."
         disableAction={enableButton}
       >
-        <ChartBox height={250}>
+        <ChartBox
+          height={250}
+          width={"100%"}
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignContent: "center",
+            width: "100%",
+          }}
+        >
           <Chart
             height="100%"
             width="100%"
