@@ -17,112 +17,58 @@ const NAVIGATION: Navigation = [
     icon: <MuiIcons.DashboardIcon />,
   },
   {
-    segment: "admin/group1",
+    segment: "admin",
     title: "Group 1",
     icon: <MuiIcons.ExtensionIcon />,
     children: [
       {
-        segment: "admin/group1/child1",
+        segment: "group1/child1",
         title: "Child 1",
         icon: <MuiIcons.VpnKeyIcon />,
       },
       {
-        segment: "admin/group1/child2",
+        segment: "group1/child2",
         title: "Child 2",
         icon: <MuiIcons.ComputerIcon />,
       },
       {
-        segment: "admin/group1/child3",
+        segment: "group1/child3",
         title: "Child 3",
         icon: <MuiIcons.AssignmentIcon />,
-      },
-      {
-        segment: "admin/group1/child4",
-        title: "Child 4",
-        icon: <MuiIcons.AssessmentIcon />,
       },
     ],
   },
   {
-    segment: "admin/group2",
+    segment: "admin",
     title: "Group 2",
-    icon: <MuiIcons.EmailIcon />,
-  },
-  {
-    segment: "admin/group3",
-    title: "Group 3",
-    icon: <MuiIcons.GavelIcon />,
-  },
-  {
-    segment: "admin/group4",
-    title: "Group 4",
-    icon: <MuiIcons.AssessmentIcon />,
-  },
-  {
-    segment: "admin/group5",
-    title: "Group 5",
     icon: <MuiIcons.SecurityIcon />,
     children: [
       {
-        segment: "admin/group5/child1",
+        segment: "group2/child1",
         title: "Child 1",
         icon: <MuiIcons.PlayArrowIcon />,
       },
       {
-        segment: "admin/group5/child2",
+        segment: "group2/child2",
         title: "Child 2",
         icon: <MuiIcons.DoneIcon />,
       },
     ],
   },
   {
-    segment: "admin/group6",
-    title: "Group 6",
-    icon: <MuiIcons.FolderSpecialIcon />,
+    segment: "admin/item1",
+    title: "Item 1",
+    icon: <MuiIcons.EmailIcon />,
   },
   {
-    segment: "admin/group7",
-    title: "Group 7",
-    icon: <MuiIcons.StorageIcon />,
-    children: [
-      {
-        segment: "admin/group7/child1",
-        title: "Child 1",
-        icon: <MuiIcons.LinkIcon />,
-      },
-      {
-        segment: "admin/group7/child2",
-        title: "Child 2",
-        icon: <MuiIcons.DomainIcon />,
-      },
-      {
-        segment: "admin/group7/child3",
-        title: "Child 3",
-        icon: <MuiIcons.MailIcon />,
-      },
-    ],
+    segment: "admin/item2",
+    title: "Item 2",
+    icon: <MuiIcons.GavelIcon />,
   },
   {
-    segment: "admin/group8",
-    title: "Group 8",
-    icon: <MuiIcons.BugReportIcon />,
-    children: [
-      {
-        segment: "admin/group8/child1",
-        title: "Child 1",
-        icon: <MuiIcons.WarningIcon />,
-      },
-      {
-        segment: "admin/group8/child2",
-        title: "Child 2",
-        icon: <MuiIcons.ErrorIcon />,
-      },
-    ],
-  },
-  {
-    segment: "admin/group9",
-    title: "Group 9",
-    icon: <MuiIcons.PersonIcon />,
+    segment: "admin/item3",
+    title: "Item 3",
+    icon: <MuiIcons.AssessmentIcon />,
   },
 ];
 
@@ -170,7 +116,9 @@ function CustomAppTitle() {
   return (
     <Stack direction="row" alignItems="center" spacing={2}>
       <Image
-        src={'https://images.pexels.com/photos/1416900/pexels-photo-1416900.jpeg'}
+        src={
+          "https://images.pexels.com/photos/1416900/pexels-photo-1416900.jpeg"
+        }
         alt="Logo"
         width={100}
         height={100}

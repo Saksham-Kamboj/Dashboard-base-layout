@@ -4,8 +4,8 @@ import { Metadata } from "next/types";
 // Alternatively, you can use generateMetadata for dynamic metadata
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "Authentication | Phishing Admin",
-    description: "Login to access the Phishing Admin Dashboard",
+    title: "Authentication | Admin",
+    description: "Login to access the Admin Dashboard",
   };
 }
 

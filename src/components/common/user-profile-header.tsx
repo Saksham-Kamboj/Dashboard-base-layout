@@ -116,25 +116,14 @@ export default function UserProfile() {
       >
         <MenuItem
           onClick={() => {
-            router.push("/profile/edit-profile");
+            router.push("/admin/profile");
             handleClose();
           }}
         >
           <ListItemIcon>
-            <MuiIcons.EditIcon fontSize="small" />
+            <MuiIcons.CancelIcon fontSize="small" />
           </ListItemIcon>
-          Edit Profile
-        </MenuItem>
-        <MenuItem
-          onClick={() => {
-            router.push("/change-password");
-            handleClose();
-          }}
-        >
-          <ListItemIcon>
-            <MuiIcons.LockIcon fontSize="small" />
-          </ListItemIcon>
-          Change Password
+          Profile
         </MenuItem>
         <MenuItem onClick={handleThemeClick}>
           <ListItemIcon>
