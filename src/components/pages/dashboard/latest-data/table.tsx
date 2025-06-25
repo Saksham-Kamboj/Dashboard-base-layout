@@ -82,7 +82,7 @@ export function LatestData(): ReactElement {
                       />
                     </TableCell>
                   </TableRow>
-                ))}{" "}
+                ))}
               </TableBody>
             </Table>
           </TableContainer>
