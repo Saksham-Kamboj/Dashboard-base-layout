@@ -39,7 +39,10 @@ export function LatestData(): ReactElement {
         description="Latest data analysis and statistics"
       >
         <ChartBox>
-          <TableContainer component={Paper} sx={{ overflow: "auto", maxHeight:"297px" }}>
+          <TableContainer
+            component={Paper}
+            sx={{ overflow: "auto", maxHeight: "297px" }}
+          >
             <Table stickyHeader size="small">
               <TableHead>
                 <TableRow>
@@ -67,13 +70,19 @@ export function LatestData(): ReactElement {
                     <TableCell>
                       <Chip
                         label={row.risk}
-                        color={getRiskColor(row.risk) as any}
+                        color={
+                          getRiskColor(row.risk) as
+                            | "error"
+                            | "warning"
+                            | "success"
+                            | "default"
+                        }
                         size="small"
                         sx={{ minWidth: 70 }}
                       />
                     </TableCell>
                   </TableRow>
-                ))}
+                ))}{" "}
               </TableBody>
             </Table>
           </TableContainer>

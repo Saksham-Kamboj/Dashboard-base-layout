@@ -127,7 +127,7 @@ export function LineGraphController(): ILineGraphControllerResponses {
         mode: theme.palette.mode === "dark" ? "dark" : "light",
       },
     }),
-    [theme]
+    [theme, defaultZoomRange]
   );
 
   const title = "Stock Price Movement";

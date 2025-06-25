@@ -28,12 +28,14 @@ interface IChartProps {
     | "rangeBar"
     | "rangeArea"
     | "treemap";
-  series: any[];
+  series: {
+    name?: string;
+    data: number[] | Array<{ x: number | string; y: number }>;
+  }[];
   width?: string | number;
   height?: string | number;
-  options?: any;
+  options?: ApexCharts.ApexOptions;
 }
-
 export const Chart = (props: IChartProps): JSX.Element => {
   const { options = {}, ...rest } = props;
 
